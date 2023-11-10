@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome {{user.name}}</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Number of pushups</th>
+                <th>Performed at</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for each in workout %}
+            <tr>
+                <td>{{each.pushups}}</td>
+                <td>{{each.date_posted.strftime('%m/%d/%Y')}}</td>
+                <td>{{each.comment}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <nav>
+        <div class="nav__left">
+            <h1>Push-Ups Logger</h1>
+
+            <div class="nav__left--button">
+                <button><a href="{{url_for('main.index')}}">All Workouts</a></button>
+                <button><a href="{{url_for('main.profile')}}">Account</a></button>
+            </div>
+        </div>
+
+        <div class="nav__right">
+            <button><a href="{{url_for('auth.signup')}}">Signup</a></button>
+            <button><a href="{{url_for('auth.login')}}">Login</a></button>
+        </div>
+    </nav>
+
+    <main>
+        <b>Welcome to your Push-Ups-logger! <br>
+            This website implements basic CRUD Functionality and user authentication features using Flask.
+        </b>
+    </main>
+</body>
+</html>
